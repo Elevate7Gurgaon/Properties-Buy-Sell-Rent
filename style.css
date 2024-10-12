@@ -1,0 +1,242 @@
+/* Base styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 4rem 5%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Why Choose Us */
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #f9a825;
+    margin-bottom: 1rem;
+}
+
+/* Popular Places */
+.place-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.place {
+    position: relative;
+    overflow: hidden;
+}
+
+.place img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.place:hover img {
+    transform: scale(1.1);
+}
+
+.place h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Stats */
+#stats {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat i {
+    font-size: 3rem;
+    color: #f9a825;
+    margin-bottom: 1rem;
+}
+
+/* Luxury Living */
+#luxury-living {
+    background-image: url('luxury-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+#luxury-living h2 {
+    margin-bottom: 1rem;
+}
+
+#luxury-living button {
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Developers */
+.developer-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.developer-logos img {
+    max-width: 150px;
+    height: auto;
+    margin: 1rem;
+}
+
+/* Testimonials */
+.testimonial-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.testimonial {
+    flex: 0 0 300px;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Contact Form */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
+#contact-form button {
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* For mobile, you'd typically add a hamburger menu */
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+}
